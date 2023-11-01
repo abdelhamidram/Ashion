@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from 'react';
+import  Link from 'react-router-dom';
+
 
 function Product({ product }) {
   const { title, price, description, category, image, rating } = product;
@@ -16,22 +18,16 @@ function Product({ product }) {
         <div className="p-4">
           <h2 className={`text-lg font-semibold text-gray-800 mb-2 ${titleClass}`}>{title}</h2>
           <p className={`text-gray-600 text-sm mb-2 ${descriptionClass}`}>{description}</p>
-
           {description.length > 3 * 40 && !isDescriptionExpanded && (
             <button
               className="text-green-500 underline"
               onClick={() => setDescriptionExpanded(true)}
-            >
-              Read More
-            </button>
+            > Read More </button>
             
           ) || <button
           className="text-green-500 underline"
           onClick={() => setDescriptionExpanded(false)}
-        >
-          Read less
-        </button>}
-
+        > Read less </button>}
 
           <div className="flex justify-between items-center">
             <p className="text-lg font-bold text-green-500">${price.toFixed(2)}</p>

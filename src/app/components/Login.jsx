@@ -71,7 +71,7 @@ function Login() {
             <br />
             <Link to="/registration" className="text-green-500 font-semibold mt-2">
               <span className="text-lg font-medium flex items-center justify-center mt-2">
-                <span>Don't have an account?</span>
+                <span>Dont have an account?</span>
               </span>
             </Link>
           </div>
